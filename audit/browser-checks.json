@@ -1,0 +1,545 @@
+{
+  "results": [
+    {
+      "test": "entrance/idle/loading",
+      "status": "PASS",
+      "fps": 60.294997009807275,
+      "drawCalls": 130,
+      "geometries": 5
+    },
+    {
+      "test": "responsive/reader",
+      "width": 320,
+      "status": "PASS",
+      "flowers": 20,
+      "calls": 46,
+      "geometries": 5,
+      "textures": 23,
+      "programs": 5
+    },
+    {
+      "test": "responsive/reader",
+      "width": 375,
+      "status": "PASS",
+      "flowers": 20,
+      "calls": 46,
+      "geometries": 5,
+      "textures": 23,
+      "programs": 5
+    },
+    {
+      "test": "responsive/reader",
+      "width": 390,
+      "status": "PASS",
+      "flowers": 20,
+      "calls": 46,
+      "geometries": 5,
+      "textures": 23,
+      "programs": 5
+    },
+    {
+      "test": "responsive/reader",
+      "width": 768,
+      "status": "PASS",
+      "flowers": 28,
+      "calls": 65,
+      "geometries": 5,
+      "textures": 31,
+      "programs": 5
+    },
+    {
+      "test": "responsive/reader",
+      "width": 1024,
+      "status": "PASS",
+      "flowers": 28,
+      "calls": 65,
+      "geometries": 5,
+      "textures": 31,
+      "programs": 5
+    },
+    {
+      "test": "responsive/reader",
+      "width": 1440,
+      "status": "PASS",
+      "flowers": 56,
+      "calls": 130,
+      "geometries": 5,
+      "textures": 59,
+      "programs": 5
+    }
+  ],
+  "reducedMotion": "PASS",
+  "runtimeErrors": [],
+  "interactions": [
+    {
+      "name": "keydown",
+      "duration": 48,
+      "id": 6465
+    },
+    {
+      "name": "keypress",
+      "duration": 48,
+      "id": 6465
+    },
+    {
+      "name": "click",
+      "duration": 48,
+      "id": 6465
+    },
+    {
+      "name": "keyup",
+      "duration": 40,
+      "id": 6465
+    },
+    {
+      "name": "keydown",
+      "duration": 64,
+      "id": 6472
+    },
+    {
+      "name": "keypress",
+      "duration": 64,
+      "id": 6472
+    },
+    {
+      "name": "click",
+      "duration": 64,
+      "id": 6472
+    },
+    {
+      "name": "keyup",
+      "duration": 64,
+      "id": 6472
+    },
+    {
+      "name": "keydown",
+      "duration": 24,
+      "id": 6479
+    },
+    {
+      "name": "keydown",
+      "duration": 32,
+      "id": 6486
+    },
+    {
+      "name": "keypress",
+      "duration": 32,
+      "id": 6486
+    },
+    {
+      "name": "click",
+      "duration": 32,
+      "id": 6486
+    },
+    {
+      "name": "keyup",
+      "duration": 24,
+      "id": 6486
+    },
+    {
+      "name": "keydown",
+      "duration": 72,
+      "id": 6493
+    },
+    {
+      "name": "keypress",
+      "duration": 72,
+      "id": 6493
+    },
+    {
+      "name": "click",
+      "duration": 72,
+      "id": 6493
+    },
+    {
+      "name": "keyup",
+      "duration": 72,
+      "id": 6493
+    },
+    {
+      "name": "keydown",
+      "duration": 32,
+      "id": 6500
+    },
+    {
+      "name": "keypress",
+      "duration": 32,
+      "id": 6500
+    },
+    {
+      "name": "click",
+      "duration": 32,
+      "id": 6500
+    },
+    {
+      "name": "keyup",
+      "duration": 32,
+      "id": 6500
+    },
+    {
+      "name": "keydown",
+      "duration": 56,
+      "id": 6507
+    },
+    {
+      "name": "keypress",
+      "duration": 56,
+      "id": 6507
+    },
+    {
+      "name": "click",
+      "duration": 56,
+      "id": 6507
+    },
+    {
+      "name": "keyup",
+      "duration": 56,
+      "id": 6507
+    },
+    {
+      "name": "keydown",
+      "duration": 16,
+      "id": 6514
+    },
+    {
+      "name": "keydown",
+      "duration": 24,
+      "id": 6521
+    },
+    {
+      "name": "keypress",
+      "duration": 24,
+      "id": 6521
+    },
+    {
+      "name": "click",
+      "duration": 24,
+      "id": 6521
+    },
+    {
+      "name": "keyup",
+      "duration": 16,
+      "id": 6521
+    },
+    {
+      "name": "keydown",
+      "duration": 72,
+      "id": 6528
+    },
+    {
+      "name": "keypress",
+      "duration": 72,
+      "id": 6528
+    },
+    {
+      "name": "click",
+      "duration": 72,
+      "id": 6528
+    },
+    {
+      "name": "keyup",
+      "duration": 72,
+      "id": 6528
+    },
+    {
+      "name": "keydown",
+      "duration": 32,
+      "id": 6535
+    },
+    {
+      "name": "keypress",
+      "duration": 32,
+      "id": 6535
+    },
+    {
+      "name": "click",
+      "duration": 32,
+      "id": 6535
+    },
+    {
+      "name": "keyup",
+      "duration": 24,
+      "id": 6535
+    },
+    {
+      "name": "keydown",
+      "duration": 56,
+      "id": 6542
+    },
+    {
+      "name": "keypress",
+      "duration": 56,
+      "id": 6542
+    },
+    {
+      "name": "click",
+      "duration": 56,
+      "id": 6542
+    },
+    {
+      "name": "keyup",
+      "duration": 56,
+      "id": 6542
+    },
+    {
+      "name": "keydown",
+      "duration": 16,
+      "id": 6549
+    },
+    {
+      "name": "keydown",
+      "duration": 24,
+      "id": 6556
+    },
+    {
+      "name": "keypress",
+      "duration": 24,
+      "id": 6556
+    },
+    {
+      "name": "click",
+      "duration": 24,
+      "id": 6556
+    },
+    {
+      "name": "keyup",
+      "duration": 24,
+      "id": 6556
+    },
+    {
+      "name": "keydown",
+      "duration": 72,
+      "id": 6563
+    },
+    {
+      "name": "keypress",
+      "duration": 72,
+      "id": 6563
+    },
+    {
+      "name": "click",
+      "duration": 72,
+      "id": 6563
+    },
+    {
+      "name": "keyup",
+      "duration": 72,
+      "id": 6563
+    },
+    {
+      "name": "keydown",
+      "duration": 32,
+      "id": 6570
+    },
+    {
+      "name": "keypress",
+      "duration": 32,
+      "id": 6570
+    },
+    {
+      "name": "click",
+      "duration": 32,
+      "id": 6570
+    },
+    {
+      "name": "keyup",
+      "duration": 32,
+      "id": 6570
+    },
+    {
+      "name": "keydown",
+      "duration": 64,
+      "id": 6577
+    },
+    {
+      "name": "keypress",
+      "duration": 64,
+      "id": 6577
+    },
+    {
+      "name": "click",
+      "duration": 64,
+      "id": 6577
+    },
+    {
+      "name": "keyup",
+      "duration": 56,
+      "id": 6577
+    },
+    {
+      "name": "keydown",
+      "duration": 24,
+      "id": 6584
+    },
+    {
+      "name": "keydown",
+      "duration": 24,
+      "id": 6591
+    },
+    {
+      "name": "keypress",
+      "duration": 24,
+      "id": 6591
+    },
+    {
+      "name": "click",
+      "duration": 24,
+      "id": 6591
+    },
+    {
+      "name": "keyup",
+      "duration": 24,
+      "id": 6591
+    },
+    {
+      "name": "keydown",
+      "duration": 64,
+      "id": 6598
+    },
+    {
+      "name": "keypress",
+      "duration": 64,
+      "id": 6598
+    },
+    {
+      "name": "click",
+      "duration": 64,
+      "id": 6598
+    },
+    {
+      "name": "keyup",
+      "duration": 64,
+      "id": 6598
+    },
+    {
+      "name": "keydown",
+      "duration": 40,
+      "id": 6605
+    },
+    {
+      "name": "keypress",
+      "duration": 40,
+      "id": 6605
+    },
+    {
+      "name": "click",
+      "duration": 40,
+      "id": 6605
+    },
+    {
+      "name": "keyup",
+      "duration": 32,
+      "id": 6605
+    },
+    {
+      "name": "keydown",
+      "duration": 24,
+      "id": 6619
+    },
+    {
+      "name": "keydown",
+      "duration": 32,
+      "id": 6626
+    },
+    {
+      "name": "keypress",
+      "duration": 32,
+      "id": 6626
+    },
+    {
+      "name": "click",
+      "duration": 32,
+      "id": 6626
+    },
+    {
+      "name": "keyup",
+      "duration": 40,
+      "id": 6626
+    },
+    {
+      "name": "keydown",
+      "duration": 32,
+      "id": 6640
+    },
+    {
+      "name": "keypress",
+      "duration": 32,
+      "id": 6640
+    },
+    {
+      "name": "click",
+      "duration": 32,
+      "id": 6640
+    },
+    {
+      "name": "keyup",
+      "duration": 32,
+      "id": 6640
+    },
+    {
+      "name": "keydown",
+      "duration": 16,
+      "id": 6647
+    },
+    {
+      "name": "keypress",
+      "duration": 16,
+      "id": 6647
+    },
+    {
+      "name": "click",
+      "duration": 16,
+      "id": 6647
+    },
+    {
+      "name": "keydown",
+      "duration": 24,
+      "id": 6654
+    },
+    {
+      "name": "keyup",
+      "duration": 24,
+      "id": 6654
+    },
+    {
+      "name": "keydown",
+      "duration": 40,
+      "id": 6661
+    },
+    {
+      "name": "keypress",
+      "duration": 40,
+      "id": 6661
+    },
+    {
+      "name": "click",
+      "duration": 40,
+      "id": 6661
+    },
+    {
+      "name": "keyup",
+      "duration": 32,
+      "id": 6661
+    },
+    {
+      "name": "keydown",
+      "duration": 16,
+      "id": 6668
+    },
+    {
+      "name": "keypress",
+      "duration": 16,
+      "id": 6668
+    },
+    {
+      "name": "click",
+      "duration": 16,
+      "id": 6668
+    }
+  ],
+  "labMaxInteractionMs": 72,
+  "loadedLetterURLs": [
+    "http://127.0.0.1:4173/letters/letter-01.png",
+    "http://127.0.0.1:4173/letters/letter-02.png"
+  ]
+}

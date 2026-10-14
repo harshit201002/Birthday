@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "PASS actual build: midnight unlock, interval cleanup, normal letters accessible, Hero navigation, missing URL fallback, no iframe/final photo preload",
+    "PASS isolated valid-URL build: locked iframe absent, automatic safe nocookie iframe, controls/no autoplay/fullscreen attributes, lazy final-photo loading, final viewer Escape/focus/scroll. Iframe and final photo responses were fixtures; live playback/content not verified."
+  ],
+  "errors": [],
+  "liveVideoPlayback": "Not verified: actual VITE_YOUTUBE_URL is unset; valid-url iframe rendering tested using an isolated build and a stubbed response.",
+  "finalLetter": "Actual final-letter.jpg is absent; browser-only fixture tested reveal/viewer mechanics."
+}

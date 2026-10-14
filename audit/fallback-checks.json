@@ -1,0 +1,69 @@
+{
+  "failures": [
+    "PASS WebGL unavailable: accessible floral fallback, heading/countdown and normal letters remain usable (expected WebGL diagnostics)",
+    "PASS failed 3D chunk download: localized accessible fallback; rest of page remains usable (expected network error)",
+    "PASS failed letter decode: text fallback without broken icon; other letter still opens"
+  ],
+  "views": [
+    {
+      "width": 320,
+      "height": 700,
+      "geometries": 5,
+      "textures": 23,
+      "programs": 5,
+      "dpr": 1,
+      "overflow": false,
+      "screenshot": "C:\\Users\\harsh\\AppData\\Local\\Temp/birthday-audit-hero-320.png"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "geometries": 5,
+      "textures": 23,
+      "programs": 5,
+      "dpr": 1,
+      "overflow": false,
+      "screenshot": "C:\\Users\\harsh\\AppData\\Local\\Temp/birthday-audit-hero-375.png"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "geometries": 5,
+      "textures": 23,
+      "programs": 5,
+      "dpr": 1,
+      "overflow": false,
+      "screenshot": "C:\\Users\\harsh\\AppData\\Local\\Temp/birthday-audit-hero-390.png"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "geometries": 5,
+      "textures": 31,
+      "programs": 5,
+      "dpr": 1,
+      "overflow": false,
+      "screenshot": "C:\\Users\\harsh\\AppData\\Local\\Temp/birthday-audit-hero-768.png"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "geometries": 5,
+      "textures": 31,
+      "programs": 5,
+      "dpr": 1,
+      "overflow": false,
+      "screenshot": "C:\\Users\\harsh\\AppData\\Local\\Temp/birthday-audit-hero-1024.png"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "geometries": 5,
+      "textures": 59,
+      "programs": 5,
+      "dpr": 1,
+      "overflow": false,
+      "screenshot": "C:\\Users\\harsh\\AppData\\Local\\Temp/birthday-audit-hero-1440.png"
+    }
+  ]
+}

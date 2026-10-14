@@ -1,0 +1,333 @@
+@import 'tailwindcss';
+@source not '../audit';
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('./assets/fonts/cormorant-garamond-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/great-vibes-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./assets/fonts/poppins-regular-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./assets/fonts/poppins-medium-latin.woff2') format('woff2');
+}
+
+@theme {
+  --color-ivory-white: #FFFEFA;
+  --color-blush-pink: #F3DADD;
+  --color-soft-rose: #E8C4B8;
+  --color-burgundy: #782F49;
+  --color-warm-gold: #D6B879;
+
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-accent: 'Great Vibes', cursive;
+  --font-body: 'Poppins', sans-serif;
+}
+
+@layer components {
+  .hero-garden {
+    padding-top: 8rem;
+    padding-bottom: 11rem;
+  }
+
+  .hero-reading {
+    max-width: 42rem;
+  }
+
+
+
+  .hero-garden-scroll {
+    bottom: 12rem;
+  }
+
+  @media (min-width: 640px) {
+    .hero-garden {
+      padding-top: 12rem;
+      padding-bottom: 15rem;
+    }
+
+    .hero-garden-scroll {
+      bottom: 16rem;
+    }
+  }
+
+  @media (min-width: 1100px) and (min-aspect-ratio: 6/5) {
+    .hero-garden {
+      padding-top: 4rem;
+      padding-bottom: 7rem;
+    }
+
+    .hero-reading {
+      width: 60%;
+    }
+
+    .hero-garden-scroll {
+      bottom: 9.5rem;
+    }
+  }
+
+  @media (min-width: 640px) and (max-width: 1099px) and (max-height: 800px) {
+    .hero-garden { padding-top: 7rem; padding-bottom: 9rem; }
+    .hero-garden-scroll { bottom: 7rem; }
+  }
+
+  .hero-glow {
+    inset: -12px;
+    transform: translate3d(var(--atmosphere-x, 0px), var(--atmosphere-y, 0px), 0);
+    background:
+      radial-gradient(ellipse 34% 48% at 50% 45%, var(--color-ivory-white), transparent 100%),
+      radial-gradient(ellipse 60% 70% at 8% 40%, color-mix(in srgb, var(--color-blush-pink) 65%, transparent), transparent 90%),
+      radial-gradient(ellipse 50% 65% at 95% 35%, color-mix(in srgb, var(--color-warm-gold) 26%, transparent), transparent 90%),
+      radial-gradient(ellipse 90% 40% at 50% 100%, color-mix(in srgb, var(--color-soft-rose) 52%, transparent), transparent 95%),
+      radial-gradient(ellipse 75% 40% at 40% 0%, color-mix(in srgb, var(--color-blush-pink) 35%, transparent), transparent 95%);
+  }
+
+  .hero-haze {
+    transform: translate3d(calc(var(--atmosphere-x, 0px) * -0.4), calc(var(--atmosphere-y, 0px) * -0.4), 0);
+    background:
+      linear-gradient(transparent 85%, color-mix(in srgb, var(--color-ivory-white) 88%, transparent) 100%),
+      radial-gradient(ellipse 48% 35% at 2% 65%, color-mix(in srgb, var(--color-blush-pink) 12%, transparent), transparent 100%),
+      radial-gradient(ellipse 48% 35% at 98% 65%, color-mix(in srgb, var(--color-warm-gold) 8%, transparent), transparent 100%),
+      radial-gradient(ellipse 24% 18% at 12% 66%, color-mix(in srgb, var(--color-ivory-white) 24%, transparent), transparent 100%),
+      radial-gradient(ellipse 24% 20% at 88% 70%, color-mix(in srgb, var(--color-ivory-white) 22%, transparent), transparent 100%),
+      radial-gradient(ellipse 85% 9% at 50% 100%, color-mix(in srgb, var(--color-ivory-white) 28%, transparent), transparent 100%);
+  }
+
+  .hero-drift-field {
+    /* Keep drifting decorations out of the reading area, with soft mask edges. */
+    mask-image:
+      linear-gradient(90deg, black, transparent 28%, transparent 72%, black),
+      linear-gradient(black, transparent 20%, transparent 82%, black);
+  }
+
+  .hero-petal {
+    position: absolute;
+    top: -8%;
+    border-radius: 70% 25% 80% 30%;
+    background: linear-gradient(135deg, var(--color-ivory-white) 20%, color-mix(in srgb, var(--color-blush-pink) 65%, var(--color-ivory-white)));
+    border: 1px solid color-mix(in srgb, var(--color-soft-rose) 22%, transparent);
+    opacity: 0;
+    /* Independent transforms let shared gusts steer the existing drifting path. */
+    translate: calc(var(--breeze-drift, 0px) * var(--petal-scale)) var(--breeze-lift, 0px);
+    rotate: var(--breeze-turn, 0deg);
+    transition: translate 80ms linear, rotate 80ms linear;
+  }
+
+  .hero-petal:nth-child(3n) {
+    border-radius: 85% 12% 85% 20%;
+    background: linear-gradient(135deg, var(--color-blush-pink), var(--color-ivory-white));
+  }
+
+  .hero-particle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--color-warm-gold);
+    box-shadow: 0 0 6px 2px color-mix(in srgb, var(--color-warm-gold) 25%, transparent);
+    opacity: 0.3;
+  }
+
+  .hero-particle:nth-of-type(even) {
+    background-color: var(--color-ivory-white);
+  }
+
+  @media (max-width: 1099px), (max-aspect-ratio: 6/5) {
+    .hero-glow {
+      background:
+        radial-gradient(ellipse 50% 38% at 50% 48%, var(--color-ivory-white), transparent 100%),
+        radial-gradient(ellipse 65% 45% at 0% 20%, color-mix(in srgb, var(--color-blush-pink) 55%, transparent), transparent 95%),
+        radial-gradient(ellipse 55% 50% at 100% 35%, color-mix(in srgb, var(--color-warm-gold) 22%, transparent), transparent 95%),
+        radial-gradient(ellipse 95% 28% at 50% 100%, color-mix(in srgb, var(--color-blush-pink) 55%, transparent), transparent 95%);
+    }
+  }
+
+  @media (max-width: 639px) {
+    .hero-particle:nth-of-type(n + 9) {
+      display: none;
+    }
+
+    .hero-petal:nth-child(n + 7) { display: none; }
+    .hero-drift-field {
+      mask-image:
+        linear-gradient(90deg, black, transparent 14%, transparent 86%, black),
+        linear-gradient(black, transparent 12%, transparent 85%, black);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-glow, .hero-haze { transition: transform 800ms ease-out; }
+    .hero-glow { animation: hero-atmosphere-wake 4.8s ease-out both; }
+    .hero-haze { animation: hero-fade 3s 1s ease-out both; }
+    .hero-light-enter { animation: hero-fade 3s 1.1s ease-out both; }
+    .hero-petals { animation: hero-fade 2.8s 1.8s ease-out both; }
+    .hero-petal {
+      animation: hero-petal-drift var(--petal-duration) var(--petal-delay) linear infinite;
+    }
+    .section-reveal {
+      transition: opacity 0.9s ease-out, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .section-reveal[data-reveal='pending'] {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+
+    .hero-heading-enter {
+      animation: hero-rise 1.1s 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .hero-subtitle-enter {
+      animation: hero-rise 1s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .hero-countdown-enter { animation: hero-fade 0.8s 0.8s ease-out both; }
+    .hero-surprise-enter { animation: hero-fade 0.8s 1.25s ease-out both; }
+
+    .hero-flowers {
+      opacity: 0;
+    }
+
+    .hero-flowers[data-ready='true'] {
+      animation: hero-fade 1.5s ease-out both;
+    }
+
+    .hero-scroll-enter {
+      animation: hero-fade 0.9s 4.1s ease-out both, hero-scroll-float 5s 5s ease-in-out infinite;
+    }
+
+    .hero-particle {
+      animation: hero-particle-drift var(--particle-duration) var(--particle-delay) ease-in-out infinite alternate;
+    }
+
+    .hero-garden[data-entrance-complete='true'] :is(.hero-heading-enter, .hero-subtitle-enter,
+      .hero-countdown-enter, .hero-surprise-enter, .hero-glow, .hero-haze, .hero-light-enter, .hero-petals) {
+      animation: none;
+    }
+    .hero-garden[data-entrance-complete='true'] .hero-scroll-enter {
+      animation: hero-scroll-float 5s ease-in-out infinite;
+    }
+  }
+
+  .hero-garden[data-atmosphere-paused='true'] .hero-particle,
+  .hero-garden[data-atmosphere-paused='true'] .hero-petal {
+    animation-play-state: paused;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-glow, .hero-haze { transform: none; }
+    .hero-petals { display: none; }
+  }
+}
+
+@media (max-width: 639px) and (max-height: 700px) {
+  .hero-garden { padding-top: 2.25rem; padding-bottom: 6rem; }
+  .hero-reading > span { margin-bottom: 0.5rem; }
+  .hero-reading h1 { font-size: 1.875rem; }
+  .hero-reading h1 + p { margin-top: 0.5rem; font-size: 1.25rem; }
+  .hero-reading > div { margin-top: 0.75rem; }
+  .hero-reading > div > .grid { min-height: 6rem; }
+  .hero-garden-scroll { bottom: 4.5rem; font-size: 0.625rem; }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes hero-atmosphere-wake {
+  from { opacity: 0.35; }
+  to { opacity: 1; }
+}
+
+@keyframes hero-scroll-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes hero-particle-drift {
+  from {
+    opacity: 0.15;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0.45;
+    transform: translate(var(--particle-drift), -28px);
+  }
+}
+
+@keyframes hero-petal-drift {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -8svh, 0) rotate(var(--petal-turn)) rotateY(20deg) scale(var(--petal-scale));
+    animation-timing-function: ease-in-out;
+  }
+  12% { opacity: 0.5; }
+  25% {
+    transform: translate3d(calc(var(--petal-drift) * 0.65), 23svh, 0) rotate(calc(var(--petal-turn) + 28deg)) rotateY(-15deg) scale(calc(var(--petal-scale) * 0.94));
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: translate3d(calc(var(--petal-drift) * -0.45), 49svh, 0) rotate(calc(var(--petal-turn) + 65deg)) rotateY(-35deg) scale(calc(var(--petal-scale) * 0.9));
+    animation-timing-function: ease-in-out;
+  }
+  75% {
+    opacity: 0.35;
+    transform: translate3d(calc(var(--petal-drift) * 0.5), 78svh, 0) rotate(calc(var(--petal-turn) + 92deg)) rotateY(10deg) scale(calc(var(--petal-scale) * 0.96));
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--petal-drift), 115svh, 0) rotate(calc(var(--petal-turn) + 130deg)) rotateY(55deg) scale(var(--petal-scale));
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--color-ivory-white);
+    color: var(--color-burgundy);
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
