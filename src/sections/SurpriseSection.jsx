@@ -2,7 +2,7 @@ import { memo, useEffect, useRef, useState } from 'react';
 import useSectionReveal from '../hooks/useSectionReveal.js';
 
 // Place the final photograph here, or update this path to use another image.
-const finalLetterImage = '/letters/final-letter.jpg';
+const finalLetterImage = `${import.meta.env.BASE_URL}letters/final-letter.jpg`;
 
 function getYouTubeEmbedUrl(value) {
   try {
