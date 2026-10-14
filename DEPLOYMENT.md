@@ -14,15 +14,21 @@ The current repository is `harshit201002/Birthday`. Its project-site URL is
    environment has deployment approvals or branch restrictions, approve the run
    or allow `main` as appropriate.
 
-The workflow uses Node.js LTS, npm caching, `npm ci`, `npm run build`, and the
+The `.github/workflows/static.yml` workflow uses Node.js LTS, npm caching, `npm ci`, `npm run build`, and the
 official Pages configure/upload/deploy actions pinned to release commits. It
 uploads only `dist/` as an artifact; compiled files are not committed.
+It also checks that the generated HTML references compiled assets and that its
+JavaScript, stylesheet, and preloaded fonts exist before uploading.
+
+Do not use a second static-site workflow that uploads `path: '.'`: this publishes
+the raw source `index.html` and causes `/src/main.jsx` and source-font 404s. Keep
+the Vite source entry and font preloads in the source `index.html`; the build
+rewrites these to `/Birthday/assets/` URLs in `dist/index.html`.
 
 ## Base path and local preview
 
-The Vite default is `/Birthday/`. GitHub Actions overrides `PAGES_BASE_PATH` using
-the Pages site's metadata, including the trailing slash, so repository renames
-and root/custom-domain sites use their configured path automatically.
+Development (`npm run dev`) runs at `/`. Production builds and previews default
+to `/Birthday/`, and this project's workflow explicitly builds for `/Birthday/`.
 
 ```sh
 npm ci
@@ -46,6 +52,8 @@ Open `http://localhost:4173/`. Remove the temporary override afterward with
 `Remove-Item Env:PAGES_BASE_PATH`. For another project path, use `/REPOSITORY/`
 with a trailing slash. Configure custom domains and DNS in GitHub Pages settings
 before deploying that domain; this workflow does not invent a domain or CNAME.
+For a future root/custom-domain deployment, also change the workflow's
+`PAGES_BASE_PATH` to `/` before building and deploying.
 
 ## Assets and configuration
 
